@@ -4,6 +4,11 @@
     
 }
 
+button {
+    padding: 10px 20px;
+    margin: 50px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,9 +18,9 @@ body {
 }
 
 div.parent {
-    width: 968px;
-    height: auto;
-    display: grid;
+    width: 600px;
+    height: 600px; /*Setting a height here is what fixed the overlaps */
+    display: grid; 
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 
