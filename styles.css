@@ -32,3 +32,7 @@ div.parent {
     background-color: blue;
     border: 1px solid black;
 }
+
+.highlight {
+    background-color: yellow;
+}
