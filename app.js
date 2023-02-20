@@ -16,21 +16,26 @@ function setGridSize (rows, cols) { //creates a row of x boxes x amount of times
         };
                 //Function to add a class in order to change the color of the boxes
         function changeColor () {
-            this.classList.add('highlight');
+            this.classList.add("highlight");
         }
         // Event listeners added to all boxes
         let boxes = document.getElementsByClassName("box");
         for (i=0; i < boxes.length;i++) {
-            boxes[i].addEventListener('mouseover', changeColor);
+            boxes[i].addEventListener("mouseover", changeColor);
         }
 }
-
-
 
 promptButton.addEventListener ("click", ()=> { //collects a grid size value from the user
     parent.innerHTML = "";
     rows = cols = prompt('Enter grid size (\"32 will return a 32x32 grid\")');
     setGridSize(rows, cols);
-    // add if else here to check input is a number, and to set a max size
+    
 
+});
+
+resetButton.addEventListener ("click", ()=> {
+  const allElements = document.querySelectorAll('*');
+  allElements.forEach((element) => {
+    element.classList.remove("highlight");
+  });
 });
